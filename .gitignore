@@ -1,4 +1,1 @@
 node_modules/
-config/.dev.env/
-config/.prod.env/
-config/default.json/
