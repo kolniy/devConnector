@@ -6,7 +6,9 @@
   "scripts": {
     "test": "npm test",
     "start": "env-cmd -f ./config/.prod.env node server.js",
-    "server-dev": "env-cmd -f ./config/.dev.env nodemon server.js"
+    "server-dev": "env-cmd -f ./config/.dev.env nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server-dev\" \"npm run client\""
   },
   "author": "kolawole olaniyi",
   "license": "ISC",
@@ -19,7 +21,8 @@
     "gravatar": "1.8.0",
     "jsonwebtoken": "8.5.1",
     "mongoose": "5.9.7",
-    "request": "2.88.2"
+    "request": "2.88.2",
+    "uuid": "8.2.0"
   },
   "devDependencies": {
     "concurrently": "5.1.0"
