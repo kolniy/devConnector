@@ -8,8 +8,8 @@ const ProfileTop = ({ profile: { status, company, location, website, social, use
           src={avatar}
           alt="user profile"
         />
-        <h1 class="large">{name}</h1>
-        <p class="lead">{status} {company && <span> at {company}</span>}</p>
+        <h1 className="large">{name}</h1>
+        <p className="lead">{status} {company && <span> at {company}</span>}</p>
         <p>{location && <span>{location}</span>}</p>
         <div className="icons my-1">
           {website && (<a href={website} target="_blank" rel="noopener noreferrer">

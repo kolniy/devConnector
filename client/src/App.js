@@ -11,8 +11,12 @@ import EditProfile from "./components/profile-forms/EditProfile";
 import Profiles from "./components/profiles/Profiles";
 import Profile from "./components/profile/Profile";
 import AddExperience from "./components/profile-forms/AddExperience";
-import AddEducation from "./components/profile-forms/AddEducation";
+import AddEducation from "./components/profile-forms/AddEducation"; 
 import PrivateRoute from "./components/routing/PrivateRoute";
+import Posts from "./components/posts/Posts";
+import Post from "./components/post/Post"
+import NotFound from "./components/layouts/NotFound"
+
 
 // REDUX
 import { Provider } from "react-redux";
@@ -65,6 +69,17 @@ const App = () => {
                 path="/add-education"
                 component={AddEducation}
               />
+              <PrivateRoute
+                exact
+                path="/posts"
+                component={Posts}
+              />
+              <PrivateRoute
+                exact
+                path="/post/:id"
+                component={Post}
+              />
+               <Route component={NotFound} />
             </Switch>
           </section>
         </>
