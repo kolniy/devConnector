@@ -8,7 +8,8 @@
     "start": "env-cmd -f ./config/.prod.env node server.js",
     "server-dev": "env-cmd -f ./config/.dev.env nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server-dev\" \"npm run client\""
+    "dev": "concurrently \"npm run server-dev\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "kolawole olaniyi",
   "license": "ISC",
