@@ -45,7 +45,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             name="name"
             value={name}
             onChange={(e) => onChange(e)}
-            // required
+            required
           />
         </div>
         <div className="form-group">
@@ -55,7 +55,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             name="email"
             value={email}
             onChange={(e) => onChange(e)}
-            // required
+            required
           />
           <small className="form-text">
             This site uses Gravatar so if you want a profile image, use a
@@ -68,9 +68,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             placeholder="Password"
             name="password"
             value={password}
-            // minLength="6"
+            minLength="6"
             onChange={(e) => onChange(e)}
-            // required
+            required
           />
         </div>
         <div className="form-group">
@@ -79,9 +79,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             placeholder="Confirm Password"
             name="password2"
             value={password2}
-            // minLength="6"
+            minLength="6"
             onChange={(e) => onChange(e)}
-            // required
+            required
           />
         </div>
         <input type="submit" className="btn btn-primary" value="Register" />
